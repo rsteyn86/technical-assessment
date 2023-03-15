@@ -1,4 +1,7 @@
-import '@/styles/globals.css'
+import '@/styles/globals/variables.css'
+import '@/styles/globals/reset.css'
+import '@/styles/globals/base.css'
+
 import type { AppProps } from 'next/app'
 import { Inter } from 'next/font/google'
 
