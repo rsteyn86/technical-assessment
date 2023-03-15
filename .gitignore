@@ -4,3 +4,7 @@ yarn.lock
 .eslintcache
 .DS_Store
 .env
+
+# next.js
+.next
+out
