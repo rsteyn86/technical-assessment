@@ -1,0 +1,344 @@
+@import "partials/mixins";
+@import "partials/forms";
+
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @media only screen and (min-width: 640px) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.sectionInner {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media only screen and (min-width: 640px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;    
+  }
+
+  @media only screen and (min-width: 1024px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.sectionHeading {
+  font-family: var(--inter-font);
+  font-weight: 800;
+  @include text-4xl;
+  letter-spacing: -0.9px;
+  color: var(--text-neutral-900);
+
+  text-align: center;
+  margin-bottom: 16px;
+
+  @media only screen and (min-width: 640px) {
+    @include text-5xl;
+    letter-spacing: -1.2px;
+  }
+}
+
+.sectionSubheading {
+  font-family: var(--inter-font);
+  font-weight: 400;
+  @include text-xl;
+  letter-spacing: -0.5px;
+  color: var(--text-neutral-500);
+
+  text-align: center;
+  margin-bottom: 64px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionHeadingAlt {
+  font-family: var(--inter-font);
+  font-weight: 800;
+  @include text-3xl;
+  letter-spacing: -.025em;
+  color: var(--text-neutral-900);
+  margin-bottom: 1rem;
+
+  @media only screen and (min-width: 640px) {
+    @include text-4xl;
+  }
+}
+
+// Header section
+.headerSection {
+  background-color: var(--color-primary-600);
+  position: relative;
+  height: calc(100vh - 72px);
+  margin-top: 72px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.headerSectionInner {
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media only screen and (min-width: 640px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.headerSectionTitle {
+  font-family: var(--inter-font);
+  color: #fff;
+  @include text-4xl;
+  font-weight: 800;
+  letter-spacing: -.025em;
+  text-align: center;
+
+  @media only screen and (min-width: 640px) {
+    @include text-5xl;
+  }
+
+  @media only screen and (min-width: 768px) {
+    text-align: left;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    @include text-6xl;
+  }
+}
+
+.headerSectionSubtitle {
+  font-family: var(--inter-font);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  max-width: 48rem;
+  margin-top: 1.5rem;
+  color: #fff;
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.headerSectionImageContainer {
+  position: absolute;
+  inset: 0;
+}
+
+.headerSectionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headerSectionImageOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg-primary-600);
+  mix-blend-mode: multiply;
+}
+
+// Team section
+.teamList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 160px;
+  row-gap: 56px;
+}
+
+.teamListItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 240px;
+}
+
+.teamListItemImageWrapper {
+  width: 224px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: var(--radius-circle);
+  margin-bottom: 24px;
+}
+
+.teamListItemName {
+  font-family: var(--inter-font);
+  font-weight: 500;
+  @include text-lg;
+  color: var(--text-neutral-900);
+  margin-bottom: 4px;
+}
+
+.teamListItemBio {
+  font-family: var(--inter-font);
+  font-weight: 400;
+  @include text-lg;
+  color: var(--text-neutral-500);
+  text-align: center;
+}
+
+// Stats section
+.statsSection {
+  background-color: var(--bg-primary-600);
+}
+
+.statsList {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+
+  text-align: center;
+  margin-top: 2.5rem;
+  gap: 2rem;
+
+  @media only screen and (min-width: 640px) {
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.statsListItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statsListItemValue {
+  font-family: var(--inter-font);
+  font-weight: 800;
+  @include text-5xl;
+  color: #fff;
+}
+
+.statsListItemLabel {
+  font-family: var(--inter-font);
+  font-weight: 500;
+  @include text-lg;
+  color: var(--text-primary-100);
+}
+
+
+// Contact section
+.contactForm {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 24px;
+
+  max-width: 720px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 640px) {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+
+.contactForm__Grid2 {
+  @media only screen and (min-width: 640px) {
+      grid-column: span 2/span 2;
+  }
+}
+
+// About section
+.aboutSection {
+  background-color: var(--bg-primary-50);
+}
+
+.aboutSectionInner {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 4rem;
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.aboutVisualWrapper {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+
+  @media only screen and (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.aboutVisual {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutList {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.aboutListItem {
+  display: flex;
+  gap: 16px;
+}
+
+.aboutListItemIconWrapper {
+  background-color: var(--bg-primary-600);
+  border-radius: var(--radius-md);
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutListItemIcon {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.aboutListItemText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aboutListItemHeading {
+  font-family: var(--inter-font);
+  font-weight: 500;
+  @include text-lg;
+  line-height: var(--leading-6);
+  color: var(--text-neutral-900);
+}
+
+.aboutListItemBody {
+  font-family: var(--inter-font);
+  font-weight: 400;
+  @include text-base;
+  color: var(--text-neutral-500);
+}
+
+// needed here for cascade
+@import "partials/utils";
