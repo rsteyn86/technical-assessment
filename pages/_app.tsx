@@ -6,6 +6,7 @@ import '@/styles/vendor/burger.css'
 import type { AppProps } from 'next/app'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className={`${inter.variable} ${inter.className}`}>
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </div>
   )
 }
