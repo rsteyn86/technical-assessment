@@ -1,0 +1,124 @@
+/* html element */
+.bm-html {
+  overflow: hidden;
+}
+
+/* body element */
+.bm-body {
+  overflow: hidden;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  color: var(--text-neutral-400);
+
+  position: relative;
+  z-index: 1 !important;
+  border-radius: var(--radius-md);
+}
+
+.bm-burger-button:hover {
+  color: var(--text-neutral-500);
+  background-color: var(--bg-neutral-100);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 40px !important;
+  width: 40px !important;
+  color: var(--text-neutral-400);
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  top: 16px !important;
+}
+
+.bm-cross-button:hover {
+  color: var(--text-neutral-500);
+  background-color: var(--bg-neutral-100);
+}
+
+.bm-cross-button button:focus-visible {
+  outline: none;
+  box-shadow: #fff 0px 0px 0px 2px, var(--border-primary-600) 0px 0px 0px 4px;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  background: #fff;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  padding-top: 1.25rem;
+  padding-bottom: 0;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual item */
+.bm-item {
+  font-family: var(--inter-font);
+  font-weight: 500;
+  font-size: var(--text-base);
+  line-height: var(--leading-6);
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.5rem 0.25rem;
+  border-radius: var(--radius-md);
+  color: var(--text-neutral-600);
+}
+
+.bm-item:hover {
+  background-color: var(--bg-neutral-100);
+  color: var(--text-neutral-900);
+}
+
+.bm-item:focus-visible {
+  outline: none;
+  box-shadow: #fff 0px 0px 0px 2px, var(--border-primary-600) 0px 0px 0px 4px;
+}
+
+/* Logo */
+.bm-logo-wrapper {
+  padding: 0;
+  margin: 0 0 1.25rem 1rem;
+  align-self: flex-start;
+  border-radius: 0;
+}
+
+.bm-logo-wrapper:hover {
+  background: none;
+}
+
+.bm-logo-wrapper:focus-visible {
+  outline: none;
+  box-shadow: #fff 0px 0px 0px 2px, var(--border-primary-600) 0px 0px 0px 4px;
+}
+
+.bm-logo {
+  padding: 0;
+}
+
+.bm-logo:hover {
+  background: none;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background-color: var(--bg-neutral-600) !important;
+  opacity: 0.75 !important;
+  top: 0;
+  left: 0;
+}
