@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
+import Slider from '@/components/Slider'
 
 export default function Home() {
   return (
@@ -30,7 +31,6 @@ export default function Home() {
             <p className={styles.headerSectionSubtitle}>Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus nisi urna, arcu sociis eu. Orci vel lectus nisl eget eget ut consectetur. Sit justo viverra non adipisicing elit distinctio.</p>
           </div>
         </section>
-
 
         <section className={styles.section}>
           <div className={styles.sectionInner}>
@@ -79,7 +79,6 @@ export default function Home() {
           </div>
         </section>
 
-
         <section className={`${styles.section} ${styles.statsSection}`}>
           <div className={styles.sectionInner}>
           <h2 className={`${styles.sectionHeading} ${styles.textWhite}`}>Advantages</h2>
@@ -105,7 +104,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
 
         <section className={styles.section}>
           <div className={styles.sectionInner}>
@@ -161,8 +159,6 @@ export default function Home() {
                   <button type="submit" className={styles.buttonPrimary}>Contact us</button>
               </div>
           </form>
-
-
           </div>
         </section>
 
@@ -224,6 +220,13 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className={styles.section}>
+          <h2 className={styles.sectionHeading}>Our Gallery</h2>
+          <p className={`${styles.sectionSubheading} ${styles.maxWidth660}`}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+          <Slider />
+        </section>
+
       </main>
     </>
   )
